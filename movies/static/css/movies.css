@@ -1,0 +1,175 @@
+.title{
+  color: white;
+	text-transform: uppercase;
+  margin-left: 10px;
+  font-size: 1.5em;
+  font-family: 'Cabin', sans-serif;
+
+}
+
+body {
+	background: #141414;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-weight: 300;
+	color: #6D6D6D;
+	h1 {
+		color: #fff;
+		font-size: 50px;
+	}
+	a {
+		padding: 5px 15px;
+		color: #6D6D6D;
+		font-size: 17px;
+		text-decoration: none;
+		text-transform: uppercase;
+		border: 1px solid #6D6D6D;
+		transition: all 300ms ease;
+		&:hover {
+			color:  $white;
+			border: 1px solid $white;
+		}
+	}
+	opacity: 0;
+	animation: fade-in 500ms ease 200ms 1 forwards;
+}
+
+@keyframes fade-in {
+	0% {
+		opacity: 0;
+		transform: scale(1.2);
+	}
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+.logo {
+	width: 110px; height:30px;
+	margin: 15px 60px;
+	background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/2000px-Netflix_2015_logo.svg.png');
+	background-size: cover;
+  position: relative;
+}
+
+.wrapper {
+	margin: 100px 0;
+	text-align: center;
+}
+
+#logo {
+  width: 130px;
+  height: 35px;
+  display: inline-block;
+  position: absolute;
+  margin-right: 10px;
+  padding-top: 5px;
+}
+p{
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
+}
+a:link,
+a:hover,
+a:active,
+a:visited{
+  transition: color 150ms;
+  color: #95a5a6;
+  text-decoration: none;
+}
+a:hover{
+  color: #7f8c8d;
+  text-decoration: underline;
+}
+.contain{
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+}
+.row__inner{
+  transition: 450ms transform;
+  font-size: 0;
+  white-space: nowrap;
+  overflow-x: hidden,scroll;
+}
+.tile{
+  position: relative;
+  display: inline-block;
+}
+.tile:hover{
+  cursor:pointer;
+  transform: scale(1);
+  visibility:visible;
+  transition: all .3s ease-in-out;
+  transform: scale(1.1);
+  z-index:100;
+  position:relative;
+  transition-timing-function:cubic-bezier(0.5, 0, 0.1, 1);
+  transition-duration:400ms;
+}
+.tile__img{
+  width: 300px;
+  height: 300px
+
+}
+.tile__details{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  font-size: 10px;
+  opacity: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 100%);
+  transition: 450ms opacity;
+}
+.tile__title{
+  position: absolute;
+  bottom: 0;
+  padding: 10px;
+
+}
+.carousel{
+	padding: 0 30px;
+}
+.carousel__button--prev, .carousel__button--next{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+}
+.carousel__button--prev{
+	left: 0;
+}
+.carousel__button--next{
+	right: 0;
+}
+.carousel__container {
+	overflow: hidden;
+	height: 300px;
+}
+.carousel__list{
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+}
+.carousel__item:hover{
+  cursor:pointer;
+  transform: scale(1);
+  visibility:visible;
+  transition: all .3s ease-in-out;
+  transform: scale(1.1);
+  z-index:100;
+  position:relative;
+  transition-timing-function:cubic-bezier(0.5, 0, 0.1, 1);
+  transition-duration:400ms;
+}
+.carousel__list.unwrap{
+	flex-wrap: nowrap;
+}
+.carousel__item{
+	flex: 0 0 300px;
+/* 	max-width: 300px; */
+	height: 300px;
+	text-align: center;
+}
