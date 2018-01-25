@@ -1,0 +1,163 @@
+{%block content%}
+<div class="logo"></div>
+<div id="wrapper">
+  <div class="relative">
+    <img src="https://image.tmdb.org/t/p/w500/{{movies.backdrop_path}}" style="width:900px;height:500px;">
+    <div class="absolute">
+      <div class="box">
+        <h2>{{movies.original_title}}</h2>
+        <div class="flex">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <h6>{{year}}</h6>
+          <h6>{{movies.vote_average}}</h6>
+        </div>
+        <p>{{movies.overview}}</p>
+      </div>
+    </div>
+    <div class="absolute">
+      <div class="box1">
+        <a id="play-video" href="#" style="text-align:center">VIEW TRAILER</a><br />
+
+        <iframe id="video" width="450" height="450" src="//www.youtube.com/embed/{{videoId}}?rel=0" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+</div>
+</div>
+
+{% endblock%} {% block head%}
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Chewy|Monoton|Cabin+Sketch|Concert+One|Arima+Madurai|Cabin">{%endblock %} {% block styles %}
+<style media="screen">
+  html {
+    overflow: scroll;
+    overflow-x: hidden;
+  }
+
+  /* ::-webkit-scrollbar-thumb {
+  background: #FF0000;
+} */
+
+  .logo {
+    width: 110px;
+    height: 30px;
+    margin: 15px 60px;
+    background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/2000px-Netflix_2015_logo.svg.png');
+    background-size: cover;
+    position: relative;
+  }
+
+  body {
+    background-attachment: fixed;
+    height: 100vh;
+    background: #141414;
+    font-family: 'Cabin', sans-serif;
+  }
+
+  #wrapper {
+    /*   border:1px solid blue; */
+    background: black;
+    width: 502px;
+    /*   height:920px; */
+  }
+
+  .relative {
+    position: relative;
+  }
+
+  .absolute {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to right, black 10%, transparent);
+  }
+
+  h2 {
+    color: white;
+  }
+
+  .absolute .flex {
+    display: flex;
+    align-items: baseline;
+    /*   border:solid 1px red; */
+    width: 190px;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    height: 40px;
+  }
+
+  .fa-star {
+    color: red;
+  }
+
+  /* .fa-star:nth-of-type(5){
+color:white;
+} */
+
+  .flex h6:nth-of-type(1) {
+    margin-left: 5px;
+    margin-right: 10px;
+    color: white;
+  }
+
+  .flex h6:nth-of-type(2) {
+    background: grey;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    width: 45px;
+    padding: 2px;
+  }
+
+  p {
+    color: white;
+    /*   border:solid 1px red; */
+    width: 300px;
+  }
+
+  .absolute .box {
+    /*   border:solid 1px red; */
+    margin-left: 25px;
+    margin-top: 60px;
+    width: 400px;
+    height: 300px;
+  }
+ .box1 {
+    /*   border:solid 1px red; */
+    margin-left: 930px;
+    margin-top: 20px;
+    width: 400px;
+    height: 300px;
+    position: absolute;
+  }
+
+  /*
+SLIDER NAV IMAGES
+*/
+
+  .slider-nav img:focus {
+    outline-color: red;
+    outline-width: 1px;
+  }
+
+  .slider-nav {
+    margin: 0 3px;
+  }
+
+  .slider-nav img {
+    height: 240px;
+    /*   border:solid 1px red; */
+    padding: 0 1px;
+    /*   margin-bottom:5px; */
+  }
+
+  h4 {
+    color: white;
+    margin-left: 5px;
+  }
+</style>{% endblock %}
