@@ -1,34 +1,37 @@
 {% extends 'base.html' %}{%block content%}
-<h1 class="title">popular movies</h1>
-<div class="carousel js-carousel">
-  <div class="carousel__container js-carousel-container">
-    <div class="carousel__list js-carousel-list">
-      {% for movie in popular %}
-      <a href="{% url 'oneMovie' movie.id %}">
-        <div class="carousel__item js-carousel-item"><img class="tile__img" src="https://image.tmdb.org/t/p/w342/{{movie.poster_path}}" alt="" /></div>
-      </a>
-      {% endfor %}
+<div class="container">
+  <h1 class="title">popular movies</h1>
+  <div class="carousel js-carousel">
+    <div class="carousel__container js-carousel-container">
+      <div class="carousel__list js-carousel-list">
+        {% for movie in popular %}
+        <a href="{% url 'oneMovie' movie.id %}">
+          <div class="carousel__item js-carousel-item"><img class="tile__img" src="https://image.tmdb.org/t/p/w342/{{movie.poster_path}}" alt="" /></div>
+        </a>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="carousel__nav">
+      <button class="carousel__button--prev js-carousel-button" data-dir="prev">&lt;</button>
+      <button class="carousel__button--next js-carousel-button" data-dir="next">&gt;</button>
     </div>
   </div>
-  <div class="carousel__nav">
-    <button class="carousel__button--prev js-carousel-button" data-dir="prev">&lt;</button>
-    <button class="carousel__button--next js-carousel-button" data-dir="next">&gt;</button>
-  </div>
-</div>
-<h1 class="title">Upcoming Movies</h1>
-<div class="carousel js-carousel">
-  <div class="carousel__container js-carousel-container">
-    <div class="carousel__list js-carousel-list">
-      {% for movie in upcoming %}
-      <a href="{% url 'oneMovie' movie.id %}">
-        <div class="carousel__item js-carousel-item"><img class="tile__img" src="https://image.tmdb.org/t/p/w342/{{movie.poster_path}}" alt="" /></div>
-      </a>
-      {% endfor %}
+  <h1 class="title">Upcoming Movies</h1>
+  <div class="carousel js-carousel">
+    <div class="carousel__container js-carousel-container">
+      <div class="carousel__list js-carousel-list">
+        {% for movie in upcoming %}
+        <a href="{% url 'oneMovie' movie.id %}">
+          <div class="carousel__item js-carousel-item"><img class="tile__img" src="https://image.tmdb.org/t/p/w342/{{movie.poster_path}}" alt="" /></div>
+        </a>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="carousel__nav">
+      <button class="carousel__button--prev js-carousel-button" data-dir="prev">&lt;</button>
+      <button class="carousel__button--next js-carousel-button" data-dir="next">&gt;</button>
     </div>
   </div>
-  <div class="carousel__nav">
-    <button class="carousel__button--prev js-carousel-button" data-dir="prev">&lt;</button>
-    <button class="carousel__button--next js-carousel-button" data-dir="next">&gt;</button>
-  </div>
 </div>
+
 {% endblock %}

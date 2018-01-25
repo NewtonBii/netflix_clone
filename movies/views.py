@@ -19,6 +19,7 @@ def movies(request):
 
     upcoming_movies_tmdb = tmdb.Movies('upcoming')
     upcoming_movies = upcoming_movies_tmdb.info()['results']
+
     return render(request, 'movies.html', {'popular':popular_movies, 'upcoming':upcoming_movies})
 
 def single_movie(request, movie_id):
