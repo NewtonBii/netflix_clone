@@ -33,16 +33,6 @@ body {
 	animation: fade-in 500ms ease 200ms 1 forwards;
 }
 
-@keyframes fade-in {
-	0% {
-		opacity: 0;
-		transform: scale(1.2);
-	}
-	100% {
-		opacity: 1;
-		transform: scale(1);
-	}
-}
 
 .logo {
 	width: 110px; height:30px;
