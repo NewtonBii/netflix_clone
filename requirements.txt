@@ -2,7 +2,7 @@ astroid==1.5.3
 certifi==2018.1.18
 chardet==3.0.4
 dj-database-url==0.4.2
-Django==1.11.7
+Django==2.2.24
 django-bootstrap3==9.1.0
 google-api-python-client==1.6.5
 gunicorn==19.7.1
